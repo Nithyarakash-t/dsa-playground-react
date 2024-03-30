@@ -1,5 +1,5 @@
 // DATA
-const airports = 'PHX BKK OKC JFK LAX MEX EZE HEL LOS LAP LIM'.split(' ');
+export const airports = 'PHX BKK OKC JFK LAX MEX EZE HEL LOS LAP LIM'.split(' ');
 
 const routes = [
     ['PHX', 'LAX'],

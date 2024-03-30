@@ -1,0 +1,47 @@
+.airroutes {
+    &__form {
+        display: grid;
+        gap: 1rem;
+        &item {
+            display: flex;
+            gap: 1rem;
+            & label {
+                &::after {
+                    content: ':';
+                }
+            }
+        }
+    }
+    &__outer {
+        display: grid;
+        gap: 3rem;
+        padding: 2rem;
+        border: .25rem solid #faebd7;
+        background-color: #fff;
+        align-items: center;
+    }
+    &__reswrap {
+        display: flex;
+        
+    }
+    &__rescol {
+        --padding: 0.5rem 1rem;
+        --border: #ccc;
+        display: grid;
+        gap: 1rem;
+        border: 1px solid var(--border);
+        h3 {
+            margin: 0;
+            padding: var(--padding);
+            font-size: inherit;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+        }
+        &:not(:last-child) {
+            border-right: 1px solid var(--border);
+        }
+        * {
+            padding: var(--padding);
+        }
+    }
+}
