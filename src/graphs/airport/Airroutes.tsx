@@ -1,13 +1,15 @@
-import React from 'react';
 import dfs from './Dfs';
+import bfs from './Bfs';
 
 function Airroutes() {
     
-    const ans:any = dfs('PHX', 'BKK', 'Bangkok');
+    const DFS_ans:any = dfs('PHX', 'EZE', 'Target');
+    const BFS_ans:any = bfs('PHX', 'EZE', 'Target');
 
     return (
       <>
-        <div>{ans}</div>
+        <p>DFS: {DFS_ans}</p>
+        <p>BFS: {BFS_ans}</p>
       </>
     );
   }

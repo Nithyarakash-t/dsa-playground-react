@@ -1,6 +1,6 @@
 import adjacencyList from "./routes";
 
-export default function bfs(start:string, end:string, displayValue:string=end) {
+export default function bfs(start:string, end:string, displayValue:string=end):string {
     const visited = new Set();
     const queue = [start];
 
@@ -10,7 +10,8 @@ export default function bfs(start:string, end:string, displayValue:string=end) {
 
         for (const destination of destinations) {
             if (destination === end)  {
-                console.log(`BFS found ${displayValue}!`)
+                console.log(`BFS found a route to ${displayValue}!`);
+                return `true`;
             }
 
             if (!visited.has(destination)) {
@@ -19,4 +20,7 @@ export default function bfs(start:string, end:string, displayValue:string=end) {
             }      
         }    
     }
+
+    // console.log(`BFS could not find a route to ${displayValue}!`);
+    return `false`;
 }

@@ -14,7 +14,6 @@ const routes = [
     ['LIM', 'BKK'],
 ];
 
-
 // The graph
 const adjacencyList = new Map();
 
