@@ -106,8 +106,6 @@ select {
 }
 
 body {
-  display: grid;
-  place-content: center;
   min-height: 100vh;
 
   font-family: var(--ff-primary);
@@ -163,12 +161,42 @@ h3 {
 .main {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 .app-main {
   display: flex;
-  flex-direction: column;
   flex: 1;
+  height: 100%;
+}
+.app-main-left {
+  display: grid;
+  flex: 0 0 300px;
+  height: 100%;
+}
+.app-sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  background: #d3d1d18c;
+  height: 100%;
+}
+.app-sidebar-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  & li {
+    padding: 1rem 0;
+    &:not(:last-child) {
+      border-bottom: 1px solid #737373;
+    }
+  }
+}
+.app-main-right {
+  display: grid;
+  place-content: center;
+  flex: 1;
+  height: 100%;
 }
 .container {
   padding-left: 4.75rem;
