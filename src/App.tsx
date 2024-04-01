@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Airroutes from './graphs/airport/Airroutes';
+import Airroutes from './graphs/bfs_dfs/Airroutes';
+import BinarySearch from './graphs/binarysearch/binarySearch';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
                 <li>
                   <Link to="/graphs-traversal">BFS, DFS</Link>
                 </li>
+                <li>
+                  <Link to="/binary-search">Binary Search</Link>
+                </li>
               </ul>
             </nav>
           </div>
@@ -31,6 +35,10 @@ function App() {
               <Route
                   path="/graphs-traversal"
                   element={<Airroutes />}
+              ></Route>
+              <Route
+                  path="/binary-search"
+                  element={<BinarySearch />}
               ></Route>
             </Routes>
           </div>
