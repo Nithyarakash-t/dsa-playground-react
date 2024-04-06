@@ -1,7 +1,10 @@
 import './App.css';
+import './template/template.scss';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Airroutes from './graphs/bfs_dfs/Airroutes';
-import BinarySearch from './graphs/binarysearch/binarySearch';
+import Airroutes from './searching_algorithms/bfs_dfs/Airroutes';
+import BinarySearch from './searching_algorithms/binarysearch/binarySearch';
+import Memoization from './algorithms/memoization/Memoization';
+import BoyerMooreMajority from './algorithms/boyer-moore_majority_matching/BoyerMooreMajority';
 
 function App() {
   return (
@@ -22,6 +25,12 @@ function App() {
                 <li>
                   <Link to="/binary-search">Binary Search</Link>
                 </li>
+                <li>
+                  <Link to="/memoization">Memoization</Link>
+                </li>
+                <li>
+                  <Link to='/boyreMooreMajority'>Boyer Moore Majority matching</Link>
+                </li>
               </ul>
             </nav>
           </div>
@@ -39,6 +48,14 @@ function App() {
               <Route
                   path="/binary-search"
                   element={<BinarySearch />}
+              ></Route>
+              <Route
+                  path="/memoization"
+                  element={<Memoization />}
+              ></Route>
+              <Route
+                  path="/boyreMooreMajority"
+                  element={<BoyerMooreMajority />}
               ></Route>
             </Routes>
           </div>
